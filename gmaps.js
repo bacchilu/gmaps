@@ -43,6 +43,7 @@ var GMaps = function (idDiv) {
                         infowindow.open(lastMarker.get("map"), lastMarker);
                     });
 
+                    google.maps.event.trigger(map, "resize");
                 }
                 else
                     error(status);
